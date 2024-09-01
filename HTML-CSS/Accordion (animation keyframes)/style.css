@@ -1,0 +1,106 @@
+/* Hide the checkbox inputs */
+.accordion-transition .accordion-input {
+  display: none;
+}
+
+/* Style the labels to look like accordion headers */
+.accordion-transition .accordion-label {
+  display: block;
+  padding: 10px;
+  background: #3498db;
+  color: white;
+  cursor: pointer;
+  border: 1px solid #2980b9;
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+/* Style the content sections */
+.accordion-transition .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  border: 1px solid #2980b9;
+  border-top: none;
+  background: #ecf0f1;
+  padding: 0 10px;
+}
+
+/* When the input is checked, expand the content section */
+.accordion-transition
+  .accordion-input:checked
+  + .accordion-label
+  + .accordion-content {
+  max-height: 200px; /* Adjust this value based on the content size */
+  padding: 10px;
+}
+
+/* Hide the checkbox inputs */
+.accordion-animation .accordion-input {
+  display: none;
+}
+
+/* Style the labels to look like accordion headers */
+.accordion-animation .accordion-label {
+  display: block;
+  padding: 10px;
+  background: #3498db;
+  color: white;
+  cursor: pointer;
+  border: 1px solid #2980b9;
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+/* Style the content sections */
+.accordion-animation .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  border: 1px solid #2980b9;
+  border-top: none;
+  background: #ecf0f1;
+}
+
+/* Animation for expanding the content */
+@keyframes expand {
+  0% {
+    max-height: 0;
+    opacity: 0.5;
+    padding: 0 10px;
+  }
+  100% {
+    max-height: 200px; /* Adjust this value based on the content size */
+    opacity: 1;
+    padding: 10px;
+  }
+}
+
+/* Animation for collapsing the content */
+@keyframes collapse {
+  0% {
+    max-height: 200px; /* Match this with the expand animation */
+    opacity: 1;
+    padding: 10px;
+  }
+  100% {
+    max-height: 0;
+    opacity: 0.5;
+    padding: 0 10px;
+  }
+}
+
+/* When the input is checked, animate the content section */
+.accordion-animation
+  .accordion-input:checked
+  + .accordion-label
+  + .accordion-content {
+  animation: expand 0.5s forwards;
+}
+
+/* When the input is unchecked, animate the content section */
+.accordion-animation
+  .accordion-input:not(:checked)
+  + .accordion-label
+  + .accordion-content {
+  animation: collapse 0.5s forwards;
+}

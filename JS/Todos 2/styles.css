@@ -1,0 +1,35 @@
+.todo-container {
+  padding: 20px;
+}
+
+.add-todo {
+  margin-left: 30px;
+}
+
+.todos {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.delete-todo {
+  margin-left: 20px;
+}
+
+.todo-text {
+  margin-left: 10px;
+}
+
+.todo-input {
+  margin-left: 20px;
+}
+
+.todo {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}

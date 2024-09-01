@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.image-container img {
+  width: 150px;
+  height: 200px;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.image-container:first-child img {
+  transform: perspective(250px) rotateY(15deg);
+  transition: transform 1s ease 0s;
+}
+
+.image-container:first-child img:hover {
+  transform: perspective(500px) rotateY(5deg);
+}
+
+.image-container:last-child img {
+  transform: perspective(250px) rotateY(-15deg);
+  transition: transform 1s ease 0s;
+}
+
+.image-container:last-child img:hover {
+  transform: perspective(500px) rotateY(-5deg);
+}
